@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post index{% endblock %}
+
+{% block body %}
+
+<h2 class="text-center">Nos appartements stars</h2>
+<div class="row">
+    {% for p in posts %}
+    <div class="col-md-6 col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-header text-center">
+                {% if p.nb >0 %}
+                    {{ p.nb}} Appartement(s) disponible(s).
+                {% endif %}
+                <br>
+                    <strong>{{ (p.prix / 100) | number_format(0,',','.')}}  FCFA /mois</strong>
+                    <br>
+                Publié le
+                <span class="bg-secondary text-light"> {{ p.createadAt ? p.createadAt|date('d/m/Y') : '' }}</span>
+                    <img alt="" style="height: 150px; width: 100%; display: block;" src="/uploads/images/posts/{{ p.image }}">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                           {{ p.title }}
+                        </h4>
+                        <p class="card-text">
+                           {{ p.description| raw}}
+                        </p>
+                        <a class="btn btn-primary" href="{{ path('app_post_show',{'id': p.id}) }}">
+                            <i class="fa-regular fa-eye fa-2xl text-light"> </i>
+                            Voir cette annonce
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

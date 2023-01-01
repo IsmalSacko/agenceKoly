@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block carousel %}
+
+{% endblock %}
+{% block body %}
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+            {% include 'post/favory.html.twig' %}
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Que faisons nous ?</h2>
+            <p class="lead">
+                Afin de répondre aux besoins de nos clients, propriétaires, locataires, investisseurs, un consultant sera mis à votre disposition afin de :
+
+                Louer ou acheter des locaux,
+                Définir une stratégie d’implantation,
+                Identifier les meilleures offres sur le marché,
+                Négocier ou renégocier les conditions de vos baux,
+                Quitter vos locaux avant l’échéance du bail (résiliation anticipée et sortie de baux)
+                Optimiser vos coûts immobiliers
+                Rationaliser et harmoniser vos implantations
+                Changement de statut : locataire ou propriétaire
+                Valoriser votre patrimoine
+                Commercialiser des surfaces vacantes
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img class="img-fluid" src="{{ asset('uploads/images/headers/pexels-photomix-company-101808.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Vous doutez encore ? Vene vous découcrir<span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">
+                Une équipe de direction composée, des agents et consultants très expérimentés dans le domaine de l’immobilier d’entreprise sur Bamaka et environs, soudée et constructive, qui met toute son énergie et son savoir-faire à votre service.
+
+                Super~agence Koky, vous propose un large choix de biens immobiliers, professionnels ou commerciaux, pour les projets d’implantation d’entreprise ou d’investissement, tant à l’achat qu’à la location : Entrepôts, locaux d’activités, locaux commerciaux et industriels, bureaux, terrains, fonds de commerce, pas-de-porte, droit au bail, immeubles
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="img-fluid" src="{{ asset('uploads/images/headers/pexels-thirdman-8469942.jpg') }}" style="height: 500px" alt="">
+        </div>
+    </div>
+
+    
+
+    <!-- /END THE FEATURETTES -->
+{% endblock %}

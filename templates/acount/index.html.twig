@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte !{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    <h1>Mon compte</h1>
+    <h4>Bienvenue <span class="text-info">{{ user.getFullName }}</span> dans votre espace personnel <i class="fa fa-user" aria-hidden="true"></i>
+    </h4>
+    <h3>Informations personnelles</h3>
+  <div class="ml-5 ">
+     <b>
+         <p> Prénom {{ user.firstname }}</p>
+         <p> Nom {{ user.lastname }}</p>
+         <p>Email: {{ user.email }}</p>
+         <p> Téléphon: {{ user.tel }}</p>
+     </b>
+  </div>
+    <p><a href="{{ path('password_update') }}">Modifier mes informations personnelles <i class="fa fa-pencil-square" aria-hidden="true"></i>
+        </a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+    <div class="text-center mb-2">
+        <h3>Veuillez vous inscrire ici</h3>
+        <span class="text-center">💚💛❤</span>
+
+    </div>
+
+    <div class="card bg-light">
+        <div class="col-sm-6 m-auto"> {{ form(form) }}</div>
+    </div>
+{% endblock %}

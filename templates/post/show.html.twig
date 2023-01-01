@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+    <h1 class="text-center alert alert-warning">Annonces "{{ post.slug }}"</h1>
+    <div class="col-sm-12">
+        <div class="card bg-light mb-3">
+            <div class="card-header text-center">
+                <strong>{{ (post.prix / 100) | number_format(0,',','.')}} FCFA /mois</strong>
+                <br>
+                Publié le
+                <span class="bg-primary text-light"> {{ post.createadAt ? post.createadAt|date('d/m/Y') : '' }}</span>
+                <img style="height: 300px; width: 100%; display: block;" src="/uploads/images/posts/{{ post.image }}" alt="Image de l'annonce">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        {{ post.title }} à {{ post.localite }}
+                    </h4>
+                    <p class="card-text">
+                        {{ post.description| raw}}
+                    </p>
+                <a href="{{ path('app_post_index') }}" class="btn btn-primary">Retour sur les annonces</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
