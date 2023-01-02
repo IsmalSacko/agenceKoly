@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title> Supper Agence - {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/carousel.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="{{ asset('assets/css/carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     {% block stylesheets %}{% endblock %}
-</head>
+    {% include 'layouts/header.html.twig' %}
+
+
 <body>
 
-{% include 'layouts/header.html.twig' %}
+
 {# read and display several types of flash messages #}
 {% for label, messages in app.flashes %}
     <div class="container mt-4" >
@@ -24,9 +27,9 @@
 
     <style>
 
-        @media only screen and (max-width: 600px) {
-            body {
-                background-color: lightblue !important;
+        @media  (max-width: 400px) {
+            body, header{
+                font-size: 1.5em!important;
             }
         }
         .bd-placeholder-img {
@@ -37,13 +40,12 @@
             -ms-user-select: none;
             user-select: none;
         }
-
         ul li  :hover{
 
             color: #bef264 !important;
         }
     </style>
-    <main role="main">
+
 
         {% if block ('carousel') is defined %}
             <main role="main">
@@ -104,12 +106,13 @@
             </div>
         {% endblock %}
 
-    </main>
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 <script src="https://kit.fontawesome.com/589fbbd582.js" crossorigin="anonymous"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
+
 
 <script>
 

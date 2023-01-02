@@ -40,7 +40,6 @@ class PostCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-
         return [
             IdField::new('id')->hideOnForm()->hideOnIndex(),
             TextField::new('title', 'Titre'),
@@ -73,7 +72,5 @@ class PostCrudController extends AbstractCrudController
     $url = $adminUrlGenerator->setController(self::class)->setAction(Action::DETAIL)->setEntityId($newPost->getId())->generateUrl();
     return $this->redirect($url);
     }
-
-
 
 }
