@@ -41,7 +41,7 @@ class RegisterController extends AbstractController
                 $user->setPassword($this->encoder->hashPassword($user,$user->getPassword()));
                 $this->manager->persist($user);
                 $this->manager->flush();
-                //return$this->redirectToRoute('login');
+                return$this->redirectToRoute('app_login');
 //                $mail = new Mailjet();
 //                $content_email = "Bonjour ".$user->getFirstname().","."<br/>Bienvenue sur notre boutique en ligne";
 //
