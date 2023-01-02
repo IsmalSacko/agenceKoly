@@ -7,7 +7,7 @@
     <h2 class="text-center">Nos appartements favoris</h2>
     <div class="row">
         {% for p in post %}
-            <div class="col-md-6 col-sm-12">
+            <div class="col-sm-12 col-lg-6 col-md-6">
                 <div class="card bg-light mb-3">
                     <div class="card-header text-center">
                         {% if p.nb >0 %}
@@ -18,7 +18,7 @@
                         <br>
                         Publié le
                         <span class="bg-secondary text-light"> {{ p.createadAt ? p.createadAt|date('d/m/Y') : '' }}</span>
-                        <img alt="" style="height: 150px; width: 100%; display: block;" src="/uploads/images/posts/{{ p.image }}">
+                        <img class="img-fluid" alt="" style="height: 150px; width: 100%; display: block;" src="/uploads/images/posts/{{ p.image }}">
                         <div class="card-body">
                             <h4 class="card-title">
                                 {{ p.title }} à {{ p.localite }}
