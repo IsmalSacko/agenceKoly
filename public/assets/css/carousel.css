@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body {
+body, html {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
@@ -83,8 +83,10 @@ body {
     }
 }
 
-@media (min-width: 62em) {
-    .featurette-heading {
-        margin-top: 7rem;
+@media only screen and (max-width: 600px) {
+
+    body, html, .navbar, .carousel, .carousel-inner, .carousel-item, .active {
+        font-size: 2em!important;
     }
+
 }
