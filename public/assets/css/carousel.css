@@ -95,10 +95,7 @@ div.row.favory{
 }
 
 }*/
-#vos_favory {
 
-    margin-top: 5% !important;
-}
 #navbarsackola {
 
     background-color: rgba(65, 105, 225) !important;
@@ -130,7 +127,9 @@ div.row.favory{
     .container {
         margin-top: 12% !important;
     }
-}@media screen and (max-width: 840px) and (max-width: 720px) {
+}
+/*
+@media screen and (max-width: 840px) and (max-width: 720px) {
 
 
     #vos_favory {
@@ -138,4 +137,4 @@ div.row.favory{
         margin-top: 55% !important;
         margin-left: 0;
     }
-}
+}*/
